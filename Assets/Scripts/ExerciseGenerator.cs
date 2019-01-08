@@ -13,6 +13,13 @@ public class ExerciseGenerator : SingletonComponent<ExerciseGenerator>
 
     void Start()
     {
+        //Read all the exercises
+
+        TextAsset textData = Resources.Load("Exercises") as TextAsset;
+        print(textData.text);
+
+
+
         SpawnedReps = new Repetition[9];
 
         Exercise testEx = new Exercise(
